@@ -10,5 +10,8 @@ namespace EfLocalDbTest.Data
         }
 
         public DbSet<CarEntity> Cars { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder model)
+            => model.Entity<CarEntity>();
     }
 }
